@@ -1,5 +1,6 @@
 # **Epic для багов на ISO образы** #
 
+### bug id:1 ###
 **Описание ошибки:** 
 Менеджер сетевых интерфейсов выкидывает ошибку при запуске виртуальной машины с <2 сетевых интерфейсов
 
@@ -32,4 +33,42 @@
 
 **Фактический результат:** Менеджер сетевых интерфейсов выкидывает ошибку nic_mgr_autosort_ifnames_at_start(&nic_mgr) failed, цикл nic_mgr_autosort_ifnames_at_start уходит в бесконечную рекурсию с такой же ошибкой
 
-**Скриншот** ![Image alt](https://github.com/shimshik/QA-trainee-assignment-autumn-2025-/raw/main/task2/RefreshPage404Error.png)
+**Скриншот** 
+
+![Image alt](https://github.com/shimshik/CSS_bugs/blob/main/screenshots/nic_mgr_autosort_ifnames_at_start(%26nic_mgr)%20failed.jpg)
+
+
+### bug id:2 ###
+
+**Описание ошибки:** 
+Ошибка при импортирование виртуальной машины с помощью гипервизора VMware Workstation 
+
+**Проект:** vESR
+
+**Серьезность:** S1 Blocker
+
+**Приоритет:** High
+
+**Статус:** New
+
+**Автор:** Шимшилашвили М.И.
+
+**Окружение:** 
+Родительская ОС - Windows 11.25H2 (сборка 26200.8246)
+
+Гипервизор - VMware® Workstation Pro 25H2u1 25.0.1.25219725
+
+Гостевая ОС - Other Linux 64-bit
+
+**Шаги воспроизведения:**
+
+1. Импортировать виртуальную машину используя упаковку vESR 1.28.ova
+   
+ 
+**Ожидаемый результат:** Виртуальная машина корректно импортируется, запускается и находится в полном работоспособном состоянии
+
+**Фактический результат:** Гиппервизор выкидывает ошибку Capacity mismatch for disk
+
+**Скриншот** 
+
+![Image alt](https://github.com/shimshik/CSS_bugs/blob/main/screenshots/Capacity%20mismatch%20for%20disk.jpg)
